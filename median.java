@@ -4,7 +4,6 @@ class median{
                   return a;
             }else{
                   return b;
-
     }
 
 }
@@ -22,31 +21,18 @@ public static int median1(int a, int b, int c){
             int result2 = 0;
 
             if (a == lastItem){
-
-                        result1 = b;
-
-                        result2 = c;
-
+                  result1 = b;
+                  result2 = c;
             }
-
             if (b == lastItem){
-
-                        result1 = a;
-
-                        result2 = c;
-
+                  result1 = a;
+                  result2 = c;
             }
-
             if (c == lastItem){
-
-                        result1 = a;
-
-                        result2 = b;
-
+                  result1 = a;
+                  result2 = b;
             }
-
             int med = bigger(result1,result2);
-
             return med;
 }
 
