@@ -12,21 +12,22 @@ public class abecedarian {
                 }
                 return true;
         }
-
         public static boolean isAbecedarianrec(String s){
-                char first = s.charAt(0);
-                char second = first ++;
-                System.out.println(first);
-                System.out.println(second);
-                if (s.charAt(0)<second){
-                         return isAbecedarianrec(s);
+                return isAbecedarianrechelp(s,(char)0);
+        }
+        
+        public static boolean isAbecedarianrechelp(String s,char c){
+                if(s.isEmpty()){
+                        return true;
+                }else if (c>s.charAt(0)){
+                         return false;
+                }else{
+                        return isAbecedarianrechelp(s.substring(1),s.charAt(0));
                 }
-                        
-                return false;
         }
 
         public static void main(String[] args) {
-                //System.out.println(isAbecedarian("abcde"));
+                System.out.println(isAbecedarian("abcde"));
                 System.out.println(isAbecedarianrec("abcde"));
         }
 }
